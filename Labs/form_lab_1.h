@@ -48,9 +48,6 @@ namespace Labs {
 	private: System::Windows::Forms::Label^ lbl_w;
 	private: System::Windows::Forms::Label^ lbl_z_answer;
 	private: System::Windows::Forms::Label^ lbl_w_answer;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::TextBox^ tb_all_results;
-
 	protected:
 
 	private:
@@ -66,7 +63,6 @@ namespace Labs {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(form_lab_1::typeid));
 			this->btn_return = (gcnew System::Windows::Forms::Button());
 			this->btn_doit = (gcnew System::Windows::Forms::Button());
 			this->lbl_task = (gcnew System::Windows::Forms::Label());
@@ -80,14 +76,11 @@ namespace Labs {
 			this->lbl_w = (gcnew System::Windows::Forms::Label());
 			this->lbl_z_answer = (gcnew System::Windows::Forms::Label());
 			this->lbl_w_answer = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->tb_all_results = (gcnew System::Windows::Forms::TextBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btn_return
 			// 
-			this->btn_return->Location = System::Drawing::Point(12, 308);
+			this->btn_return->Location = System::Drawing::Point(23, 213);
 			this->btn_return->Name = L"btn_return";
 			this->btn_return->Size = System::Drawing::Size(146, 23);
 			this->btn_return->TabIndex = 0;
@@ -97,7 +90,7 @@ namespace Labs {
 			// 
 			// btn_doit
 			// 
-			this->btn_doit->Location = System::Drawing::Point(422, 155);
+			this->btn_doit->Location = System::Drawing::Point(152, 162);
 			this->btn_doit->Name = L"btn_doit";
 			this->btn_doit->Size = System::Drawing::Size(75, 23);
 			this->btn_doit->TabIndex = 1;
@@ -108,7 +101,7 @@ namespace Labs {
 			// lbl_task
 			// 
 			this->lbl_task->AutoSize = true;
-			this->lbl_task->Location = System::Drawing::Point(12, 18);
+			this->lbl_task->Location = System::Drawing::Point(34, 18);
 			this->lbl_task->Name = L"lbl_task";
 			this->lbl_task->Size = System::Drawing::Size(269, 13);
 			this->lbl_task->TabIndex = 2;
@@ -117,7 +110,7 @@ namespace Labs {
 			// lbl_a
 			// 
 			this->lbl_a->AutoSize = true;
-			this->lbl_a->Location = System::Drawing::Point(24, 161);
+			this->lbl_a->Location = System::Drawing::Point(34, 52);
 			this->lbl_a->Name = L"lbl_a";
 			this->lbl_a->Size = System::Drawing::Size(22, 13);
 			this->lbl_a->TabIndex = 3;
@@ -125,26 +118,24 @@ namespace Labs {
 			// 
 			// tb_a
 			// 
-			this->tb_a->Location = System::Drawing::Point(49, 158);
+			this->tb_a->Location = System::Drawing::Point(59, 49);
 			this->tb_a->Name = L"tb_a";
 			this->tb_a->Size = System::Drawing::Size(84, 20);
 			this->tb_a->TabIndex = 4;
 			this->tb_a->Text = L"0,5";
-			this->tb_a->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &form_lab_1::tb_a_KeyPress);
 			// 
 			// tb_b
 			// 
-			this->tb_b->Location = System::Drawing::Point(164, 158);
+			this->tb_b->Location = System::Drawing::Point(174, 49);
 			this->tb_b->Name = L"tb_b";
 			this->tb_b->Size = System::Drawing::Size(84, 20);
 			this->tb_b->TabIndex = 6;
 			this->tb_b->Text = L"3,1";
-			this->tb_b->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &form_lab_1::tb_b_KeyPress);
 			// 
 			// lbl_b
 			// 
 			this->lbl_b->AutoSize = true;
-			this->lbl_b->Location = System::Drawing::Point(139, 161);
+			this->lbl_b->Location = System::Drawing::Point(149, 52);
 			this->lbl_b->Name = L"lbl_b";
 			this->lbl_b->Size = System::Drawing::Size(22, 13);
 			this->lbl_b->TabIndex = 5;
@@ -152,17 +143,16 @@ namespace Labs {
 			// 
 			// tb_x
 			// 
-			this->tb_x->Location = System::Drawing::Point(279, 158);
+			this->tb_x->Location = System::Drawing::Point(289, 49);
 			this->tb_x->Name = L"tb_x";
 			this->tb_x->Size = System::Drawing::Size(84, 20);
 			this->tb_x->TabIndex = 8;
 			this->tb_x->Text = L"1,414";
-			this->tb_x->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &form_lab_1::tb_x_KeyPress);
 			// 
 			// lbl_x
 			// 
 			this->lbl_x->AutoSize = true;
-			this->lbl_x->Location = System::Drawing::Point(254, 161);
+			this->lbl_x->Location = System::Drawing::Point(264, 52);
 			this->lbl_x->Name = L"lbl_x";
 			this->lbl_x->Size = System::Drawing::Size(21, 13);
 			this->lbl_x->TabIndex = 7;
@@ -171,65 +161,44 @@ namespace Labs {
 			// lbl_z
 			// 
 			this->lbl_z->AutoSize = true;
-			this->lbl_z->Location = System::Drawing::Point(25, 201);
+			this->lbl_z->Location = System::Drawing::Point(34, 88);
 			this->lbl_z->Name = L"lbl_z";
-			this->lbl_z->Size = System::Drawing::Size(21, 13);
+			this->lbl_z->Size = System::Drawing::Size(228, 13);
 			this->lbl_z->TabIndex = 9;
-			this->lbl_z->Text = L"z =";
+			this->lbl_z->Text = L"z = sqrt(a * x * sin(2 * x) + exp(-2 * x) * (x + b)) = ";
 			// 
 			// lbl_w
 			// 
 			this->lbl_w->AutoSize = true;
-			this->lbl_w->Location = System::Drawing::Point(25, 233);
+			this->lbl_w->Location = System::Drawing::Point(34, 120);
 			this->lbl_w->Name = L"lbl_w";
-			this->lbl_w->Size = System::Drawing::Size(24, 13);
+			this->lbl_w->Size = System::Drawing::Size(291, 13);
 			this->lbl_w->TabIndex = 10;
-			this->lbl_w->Text = L"w =";
+			this->lbl_w->Text = L"w = pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2)) = ";
 			// 
 			// lbl_z_answer
 			// 
 			this->lbl_z_answer->AutoSize = true;
-			this->lbl_z_answer->Location = System::Drawing::Point(52, 201);
+			this->lbl_z_answer->Location = System::Drawing::Point(258, 88);
 			this->lbl_z_answer->Name = L"lbl_z_answer";
-			this->lbl_z_answer->Size = System::Drawing::Size(0, 13);
+			this->lbl_z_answer->Size = System::Drawing::Size(37, 13);
 			this->lbl_z_answer->TabIndex = 11;
+			this->lbl_z_answer->Text = L"";
 			// 
 			// lbl_w_answer
 			// 
 			this->lbl_w_answer->AutoSize = true;
-			this->lbl_w_answer->Location = System::Drawing::Point(55, 233);
+			this->lbl_w_answer->Location = System::Drawing::Point(321, 120);
 			this->lbl_w_answer->Name = L"lbl_w_answer";
-			this->lbl_w_answer->Size = System::Drawing::Size(0, 13);
+			this->lbl_w_answer->Size = System::Drawing::Size(40, 13);
 			this->lbl_w_answer->TabIndex = 12;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(12, 52);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(540, 83);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 13;
-			this->pictureBox1->TabStop = false;
-			// 
-			// tb_all_results
-			// 
-			this->tb_all_results->AcceptsTab = true;
-			this->tb_all_results->Enabled = false;
-			this->tb_all_results->Location = System::Drawing::Point(187, 201);
-			this->tb_all_results->Multiline = true;
-			this->tb_all_results->Name = L"tb_all_results";
-			this->tb_all_results->Size = System::Drawing::Size(365, 119);
-			this->tb_all_results->TabIndex = 14;
-			this->tb_all_results->WordWrap = false;
+			this->lbl_w_answer->Text = L"";
 			// 
 			// form_lab_1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(564, 343);
-			this->Controls->Add(this->tb_all_results);
-			this->Controls->Add(this->pictureBox1);
+			this->ClientSize = System::Drawing::Size(436, 261);
 			this->Controls->Add(this->lbl_w_answer);
 			this->Controls->Add(this->lbl_z_answer);
 			this->Controls->Add(this->lbl_w);
@@ -244,9 +213,7 @@ namespace Labs {
 			this->Controls->Add(this->btn_doit);
 			this->Controls->Add(this->btn_return);
 			this->Name = L"form_lab_1";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"form_lab_1";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -268,33 +235,11 @@ namespace Labs {
 			//Вывод данных
 			lbl_z_answer->Text = Convert::ToString(z);
 			lbl_w_answer->Text = Convert::ToString(w);
-
-			int intz = floor(z);
-			double doublez = z - intz;
-			String^ msg = "";
-			msg += "Целая часть z = " + Convert::ToString(intz) + Environment::NewLine;
-			msg += "Дробная часть z = " + Convert::ToString(doublez) + Environment::NewLine;
-			msg += "Округление вверх z = " + Convert::ToString(ceil(z)) + Environment::NewLine;
-			msg += "Округление вниз z = " + Convert::ToString(floor(z)) + Environment::NewLine;
-			msg += "Префиксный инкремент целой части = " + Convert::ToString(++intz) + Environment::NewLine;
-			msg += "Постфиксный инкремент дробной части = " + Convert::ToString(doublez++) + Environment::NewLine;
-			msg += "Значение целой части после приращения = " + Convert::ToString(intz) + Environment::NewLine;
-			msg += "Значение дробной части после приращения = " + Convert::ToString(doublez);
-			tb_all_results->Text = msg;
 		}
 		catch (System::FormatException^ e)  //Обрабатываем ошибку исключения
 		{
 			MessageBox::Show("Ошибка при вводе данных. Введите число!", "Сообщение", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
-private: System::Void tb_a_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == ',') || (e->KeyChar == '.') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
-private: System::Void tb_b_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == ',') || (e->KeyChar == '.') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
-private: System::Void tb_x_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == ',') || (e->KeyChar == '.') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
 };
 }
