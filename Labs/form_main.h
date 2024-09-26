@@ -42,7 +42,16 @@ namespace Labs {
 	private: System::Windows::Forms::Button^ btn_lab_3;
 	private: System::Windows::Forms::Button^ btn_lab_4;
 	private: System::Windows::Forms::Button^ btn_lab_5;
-	private: System::Windows::Forms::Label^ lbl_first_text;
+	private: System::Windows::Forms::Label^ lbl_MTUCI;
+	private: System::Windows::Forms::Label^ lbl_kafedra;
+	private: System::Windows::Forms::Label^ lbl_disciplina;
+	private: System::Windows::Forms::Label^ lbl_podgjtovil;
+	private: System::Windows::Forms::Label^ lbl_whocheck;
+	private: System::Windows::Forms::Label^ lbl_variant13;
+	private: System::Windows::Forms::Label^ lbl_Moscow;
+	private: System::Windows::Forms::Label^ lbl_labs;
+
+
 	protected:
 
 	private:
@@ -63,12 +72,19 @@ namespace Labs {
 			this->btn_lab_3 = (gcnew System::Windows::Forms::Button());
 			this->btn_lab_4 = (gcnew System::Windows::Forms::Button());
 			this->btn_lab_5 = (gcnew System::Windows::Forms::Button());
-			this->lbl_first_text = (gcnew System::Windows::Forms::Label());
+			this->lbl_MTUCI = (gcnew System::Windows::Forms::Label());
+			this->lbl_kafedra = (gcnew System::Windows::Forms::Label());
+			this->lbl_disciplina = (gcnew System::Windows::Forms::Label());
+			this->lbl_podgjtovil = (gcnew System::Windows::Forms::Label());
+			this->lbl_whocheck = (gcnew System::Windows::Forms::Label());
+			this->lbl_variant13 = (gcnew System::Windows::Forms::Label());
+			this->lbl_Moscow = (gcnew System::Windows::Forms::Label());
+			this->lbl_labs = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// btn_lab_1
 			// 
-			this->btn_lab_1->Location = System::Drawing::Point(215, 74);
+			this->btn_lab_1->Location = System::Drawing::Point(12, 426);
 			this->btn_lab_1->Name = L"btn_lab_1";
 			this->btn_lab_1->Size = System::Drawing::Size(154, 23);
 			this->btn_lab_1->TabIndex = 0;
@@ -78,7 +94,7 @@ namespace Labs {
 			// 
 			// btn_lab_2
 			// 
-			this->btn_lab_2->Location = System::Drawing::Point(215, 103);
+			this->btn_lab_2->Location = System::Drawing::Point(12, 455);
 			this->btn_lab_2->Name = L"btn_lab_2";
 			this->btn_lab_2->Size = System::Drawing::Size(154, 23);
 			this->btn_lab_2->TabIndex = 1;
@@ -88,7 +104,7 @@ namespace Labs {
 			// 
 			// btn_lab_3
 			// 
-			this->btn_lab_3->Location = System::Drawing::Point(215, 132);
+			this->btn_lab_3->Location = System::Drawing::Point(12, 484);
 			this->btn_lab_3->Name = L"btn_lab_3";
 			this->btn_lab_3->Size = System::Drawing::Size(154, 23);
 			this->btn_lab_3->TabIndex = 2;
@@ -97,7 +113,7 @@ namespace Labs {
 			// 
 			// btn_lab_4
 			// 
-			this->btn_lab_4->Location = System::Drawing::Point(215, 161);
+			this->btn_lab_4->Location = System::Drawing::Point(12, 513);
 			this->btn_lab_4->Name = L"btn_lab_4";
 			this->btn_lab_4->Size = System::Drawing::Size(154, 23);
 			this->btn_lab_4->TabIndex = 3;
@@ -106,34 +122,113 @@ namespace Labs {
 			// 
 			// btn_lab_5
 			// 
-			this->btn_lab_5->Location = System::Drawing::Point(215, 190);
+			this->btn_lab_5->Location = System::Drawing::Point(12, 542);
 			this->btn_lab_5->Name = L"btn_lab_5";
 			this->btn_lab_5->Size = System::Drawing::Size(154, 23);
 			this->btn_lab_5->TabIndex = 4;
 			this->btn_lab_5->Text = L"Лабораторная работа 5";
 			this->btn_lab_5->UseVisualStyleBackColor = true;
 			// 
-			// lbl_first_text
+			// lbl_MTUCI
 			// 
-			this->lbl_first_text->AutoSize = true;
-			this->lbl_first_text->Location = System::Drawing::Point(115, 36);
-			this->lbl_first_text->Name = L"lbl_first_text";
-			this->lbl_first_text->Size = System::Drawing::Size(366, 13);
-			this->lbl_first_text->TabIndex = 5;
-			this->lbl_first_text->Text = L"Нажмите на кнопку чтобы открыть окно нужной лабораторной работы";
+			this->lbl_MTUCI->AutoSize = true;
+			this->lbl_MTUCI->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13));
+			this->lbl_MTUCI->Location = System::Drawing::Point(95, 45);
+			this->lbl_MTUCI->Name = L"lbl_MTUCI";
+			this->lbl_MTUCI->Size = System::Drawing::Size(668, 22);
+			this->lbl_MTUCI->TabIndex = 5;
+			this->lbl_MTUCI->Text = L"\"МОСКОВСКИЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯЗИ И ИНФОРМАТИКИ\"";
+			// 
+			// lbl_kafedra
+			// 
+			this->lbl_kafedra->AutoSize = true;
+			this->lbl_kafedra->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_kafedra->Location = System::Drawing::Point(316, 85);
+			this->lbl_kafedra->Name = L"lbl_kafedra";
+			this->lbl_kafedra->Size = System::Drawing::Size(185, 18);
+			this->lbl_kafedra->TabIndex = 6;
+			this->lbl_kafedra->Text = L"Кафедра \"Информатика\"";
+			// 
+			// lbl_disciplina
+			// 
+			this->lbl_disciplina->AutoSize = true;
+			this->lbl_disciplina->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_disciplina->Location = System::Drawing::Point(170, 152);
+			this->lbl_disciplina->Name = L"lbl_disciplina";
+			this->lbl_disciplina->Size = System::Drawing::Size(462, 18);
+			this->lbl_disciplina->TabIndex = 7;
+			this->lbl_disciplina->Text = L"Дисциплина: Информационные технологии и программирование";
+			// 
+			// lbl_podgjtovil
+			// 
+			this->lbl_podgjtovil->AutoSize = true;
+			this->lbl_podgjtovil->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_podgjtovil->Location = System::Drawing::Point(423, 304);
+			this->lbl_podgjtovil->Name = L"lbl_podgjtovil";
+			this->lbl_podgjtovil->Size = System::Drawing::Size(261, 18);
+			this->lbl_podgjtovil->TabIndex = 8;
+			this->lbl_podgjtovil->Text = L"Подготовил: Окишев К. А. БМИ2301";
+			// 
+			// lbl_whocheck
+			// 
+			this->lbl_whocheck->AutoSize = true;
+			this->lbl_whocheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_whocheck->Location = System::Drawing::Point(423, 331);
+			this->lbl_whocheck->Name = L"lbl_whocheck";
+			this->lbl_whocheck->Size = System::Drawing::Size(410, 18);
+			this->lbl_whocheck->TabIndex = 9;
+			this->lbl_whocheck->Text = L"Проверил: доцент кафедры \"Информатика\" Гуриков С.Р.";
+			// 
+			// lbl_variant13
+			// 
+			this->lbl_variant13->AutoSize = true;
+			this->lbl_variant13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_variant13->Location = System::Drawing::Point(365, 454);
+			this->lbl_variant13->Name = L"lbl_variant13";
+			this->lbl_variant13->Size = System::Drawing::Size(85, 18);
+			this->lbl_variant13->TabIndex = 10;
+			this->lbl_variant13->Text = L"Вариант 13";
+			// 
+			// lbl_Moscow
+			// 
+			this->lbl_Moscow->AutoSize = true;
+			this->lbl_Moscow->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_Moscow->Location = System::Drawing::Point(359, 484);
+			this->lbl_Moscow->Name = L"lbl_Moscow";
+			this->lbl_Moscow->Size = System::Drawing::Size(108, 18);
+			this->lbl_Moscow->TabIndex = 11;
+			this->lbl_Moscow->Text = L"Москва 2024г.";
+			// 
+			// lbl_labs
+			// 
+			this->lbl_labs->AutoSize = true;
+			this->lbl_labs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->lbl_labs->Location = System::Drawing::Point(321, 118);
+			this->lbl_labs->Name = L"lbl_labs";
+			this->lbl_labs->Size = System::Drawing::Size(168, 18);
+			this->lbl_labs->TabIndex = 12;
+			this->lbl_labs->Text = L"Лабораторные работы";
 			// 
 			// form_main
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(583, 261);
-			this->Controls->Add(this->lbl_first_text);
+			this->ClientSize = System::Drawing::Size(850, 580);
+			this->Controls->Add(this->lbl_labs);
+			this->Controls->Add(this->lbl_Moscow);
+			this->Controls->Add(this->lbl_variant13);
+			this->Controls->Add(this->lbl_whocheck);
+			this->Controls->Add(this->lbl_podgjtovil);
+			this->Controls->Add(this->lbl_disciplina);
+			this->Controls->Add(this->lbl_kafedra);
+			this->Controls->Add(this->lbl_MTUCI);
 			this->Controls->Add(this->btn_lab_5);
 			this->Controls->Add(this->btn_lab_4);
 			this->Controls->Add(this->btn_lab_3);
 			this->Controls->Add(this->btn_lab_2);
 			this->Controls->Add(this->btn_lab_1);
 			this->Name = L"form_main";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"form_main";
 			this->ResumeLayout(false);
 			this->PerformLayout();
