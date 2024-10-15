@@ -9,6 +9,7 @@ namespace Labs {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace LabsDLL;
 
 	/// <summary>
 	/// Сводка для form_lab_1
@@ -257,17 +258,23 @@ namespace Labs {
 		this->Close();
 	}
 	private: System::Void btn_doit_Click(System::Object^ sender, System::EventArgs^ e) {
-		float a, b, x;
+		double a, b, x;
 		try  //Начало блока обработки исключения
 		{
-			a = Convert::ToDouble(tb_a->Text->Replace('.', ','));
-			b = Convert::ToDouble(tb_b->Text->Replace('.', ','));
-			x = Convert::ToDouble(tb_x->Text->Replace('.', ','));
-			double z = sqrt(a * x * sin(2 * x) + exp(-2 * x) * (x + b));
-			double w = pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2));
+			//a = Convert::ToDouble(tb_a->Text->Replace('.', ','));
+			//b = Convert::ToDouble(tb_b->Text->Replace('.', ','));
+			//x = Convert::ToDouble(tb_x->Text->Replace('.', ','));
+			a = LabsDLL::Class1::Vvod(tb_a);
+			b = LabsDLL::Class1::Vvod(tb_b);
+			x = LabsDLL::Class1::Vvod(tb_x);
+			//double z = sqrt(a * x * sin(2 * x) + exp(-2 * x) * (x + b));
+			//double w = pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2));
 			//Вывод данных
-			lbl_z_answer->Text = Convert::ToString(z);
-			lbl_w_answer->Text = Convert::ToString(w);
+			LabsDLL::Class1::Solve12(a, b, x, lbl_z_answer, lbl_w_answer);
+			double z = LabsDLL::Class1::Solve1(a, b, x);
+			//lbl_z_answer->Text = Convert::ToString(z);
+			//lbl_w_answer->Text = Convert::ToString(w);
+
 
 			int intz = floor(z);
 			double doublez = z - intz;
