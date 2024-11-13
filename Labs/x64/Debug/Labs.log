@@ -1,0 +1,19 @@
+﻿  form_lab_2.cpp
+  form_main.cpp
+  form_lab_1.cpp
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(279,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_main.cpp")
+  
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(292,35): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "form_main.cpp")
+  
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(279,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_lab_1.cpp")
+  
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(292,35): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "form_lab_1.cpp")
+  
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Создание кода...
+  form_lab_2.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Labs.vcxproj -> C:\Users\Валерия\source\repos\KreOWO\laboratory-work\x64\Debug\Labs.exe

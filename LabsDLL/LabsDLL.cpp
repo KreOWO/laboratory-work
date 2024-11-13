@@ -25,20 +25,17 @@ namespace LabsDLL {
 
     double Class1::Solve1(double a, double b, double x)
     {
-        double z = sqrt(a * x * sin(2 * x) + exp(-2 * x) * (x + b));
-        return z;
+        return sqrt(a * x * sin(2 * x) + exp(-2 * x) * (x + b));;
     }
 
     void Class1::Solve2(double a, double b, double x, TextBox^ t2)
     {
-        double w = pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2));
-        Class1::Vivod(w, t2);
+        Class1::Vivod(pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2)), t2);
     }
 
     void Class1::Solve2(double a, double b, double x, Label^ l2)
     {
-        double w = pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2));
-        Class1::Vivod(w, l2);
+        Class1::Vivod(pow(cos(pow(x, 3)), 2) - x / sqrt(pow(a, 2) + pow(b, 2)), l2);
     }
 
     void Class1::Solve12(double a, double b, double x, TextBox^ t1, TextBox^ t2)

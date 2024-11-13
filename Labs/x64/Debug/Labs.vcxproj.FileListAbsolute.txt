@@ -1,0 +1,11 @@
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\x64\Debug\Labs.vcxproj.AssemblyReference.cache
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\x64\Debug\Labs.form_lab_1.resources
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\x64\Debug\Labs.form_lab_2.resources
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\x64\Debug\Labs.form_main.resources
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\x64\Debug\Labs.vcxproj.GenerateResource.cache
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\KreO\Labs\x64\Debug\Labs.vcxproj.AssemblyReference.cache
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\KreO\Labs\x64\Debug\Labs.form_lab_1.resources
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\KreO\Labs\x64\Debug\Labs.form_lab_2.resources
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\KreO\Labs\x64\Debug\Labs.form_main.resources
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\KreO\Labs\x64\Debug\Labs.vcxproj.GenerateResource.cache
+C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\x64\Debug\Labs.vcxproj.Up2Date
