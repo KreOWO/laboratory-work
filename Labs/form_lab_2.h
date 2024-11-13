@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #pragma once
 #include <vector>
 
@@ -73,7 +72,7 @@ namespace Labs {
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -265,7 +264,7 @@ namespace Labs {
 			this->Controls->Add(this->btn_back);
 			this->Name = L"form_lab_2";
 			this->Text = L"Лабораторная работа 2";
-			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &form_lab_2::form_lab_2_FormClosing);
+			//this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &form_lab_2::form_lab_2_FormClosing);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bp_task))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -275,180 +274,94 @@ namespace Labs {
 	private: System::Void btn_back_Click(System::Object^ sender, System::EventArgs^ e) {
 		Owner->Show();
 		this->Close();
-	}
+	}/*
 	private: System::Void form_lab_2_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 		Application::Exit();
-	}
+	}*/
 	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void btn_generate_Click(System::Object^ sender, System::EventArgs^ e) {
-	btn_generate->BackColor = System::Drawing::Color::PaleGreen;
-	btn_write->BackColor = System::Drawing::Color::Silver;
-	tb_startarray->Enabled = false;
-	tb_startarray->Text = "";
-	int arraylen, minvalue, maxvalue;
-	arraylen = LabsDLL::Class1::Vvod(tb_arraylen);
-	minvalue = LabsDLL::Class1::Vvod(tb_minvalue);
-	maxvalue = LabsDLL::Class1::Vvod(tb_maxvalue);
-	vector<int> array;
-	for (int i = 0; i < arraylen; i++) {
-		int newval = minvalue + (rand() % (maxvalue - minvalue));
-		array.push_back(newval);
-		tb_startarray->Text += Convert::ToString(newval) + " ";
-	}
-
-}
-private: System::Void btn_write_Click(System::Object^ sender, System::EventArgs^ e) {
-	btn_write->BackColor = System::Drawing::Color::PaleGreen;
-	btn_generate->BackColor = System::Drawing::Color::Silver;
-	tb_startarray->Enabled = true;
-}
-private: System::Void brn_solve_Click(System::Object^ sender, System::EventArgs^ e) {
-	vector<int> array;
-	if (tb_startarray->Text != "")
-	{
-		tb_startarray->Text = tb_startarray->Text->Replace('.', ',')->Replace('  ', ' ')->Replace('- ', '-');
-
-		String^ laststr = "";
-		for (int i = 0; i < tb_startarray->Text->Length; i++) {
-			if (tb_startarray->Text[i] == ' ' || i == tb_startarray->Text->Length - 1) {
-				array.push_back(Convert::ToInt32(laststr));
-				laststr = "";
-			}
-			else {
-				laststr += tb_startarray->Text[i];
-			}
+	private: System::Void btn_generate_Click(System::Object^ sender, System::EventArgs^ e) {
+		btn_generate->BackColor = System::Drawing::Color::PaleGreen;
+		btn_write->BackColor = System::Drawing::Color::Silver;
+		tb_startarray->Enabled = false;
+		tb_startarray->Text = "";
+		int arraylen, minvalue, maxvalue;
+		arraylen = LabsDLL::Class1::Vvod(tb_arraylen);
+		minvalue = LabsDLL::Class1::Vvod(tb_minvalue);
+		maxvalue = LabsDLL::Class1::Vvod(tb_maxvalue);
+		vector<int> array;
+		for (int i = 0; i < arraylen; i++) {
+			int newval = minvalue + (rand() % (maxvalue - minvalue));
+			array.push_back(newval);
+			tb_startarray->Text += Convert::ToString(newval) + " ";
 		}
+
 	}
-	else {
-		tb_startarray->Text = "0";
-		array.push_back(0);
+	private: System::Void btn_write_Click(System::Object^ sender, System::EventArgs^ e) {
+		btn_write->BackColor = System::Drawing::Color::PaleGreen;
+		btn_generate->BackColor = System::Drawing::Color::Silver;
+		tb_startarray->Enabled = true;
 	}
-
-	int maxchet = LabsDLL::Class1::Vvod(tb_minvalue);
-	int maxchetind = 0;
-	vector<int> resarray;
-	for (int i = 0; i < array.size(); i++) {
-		if (array[i] % 2 == 0 && array[i] > maxchet) {
-			maxchet = array[i];
-			maxchetind = i;
-		}
-	}
-
-	for (int i = 0; i < array.size(); i++) {
-		if (array[i] < maxchet) {
-			resarray.push_back(i);
-		}
-	}
-
-
-	String^ msg = "";
-	msg += "Индекс максимального четного элемента (" + Convert::ToString(maxchet) + "): " + Convert::ToString(maxchetind) + Environment::NewLine;
-	msg += "Индексы элементов, меньших чем " + Convert::ToString(maxchet) + ": " + Environment::NewLine;
-
-	for (int i = 0; i < resarray.size(); i++) {
-		msg += Convert::ToString(resarray[i]) + " ";
-	}
-
-	tb_answer->Text = msg;
-}
-private: System::Void tb_arraylen_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
-private: System::Void tb_minvalue_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
-private: System::Void tb_maxvalue_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
-private: System::Void tb_startarray_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == '-') || (e->KeyChar == ' ') || (e->KeyChar == 8))) e->KeyChar = Char(0);
-}
-};
-}
-=======
-#pragma once
-#include <cmath>
-
-namespace Labs {
-
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
-
-	/// <summary>
-	/// Сводка для form_lab_2
-	/// </summary>
-	public ref class form_lab_2 : public System::Windows::Forms::Form
-	{
-	public:
-		form_lab_2(void)
+	private: System::Void brn_solve_Click(System::Object^ sender, System::EventArgs^ e) {
+		vector<int> array;
+		if (tb_startarray->Text != "")
 		{
-			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
-		}
+			tb_startarray->Text = tb_startarray->Text->Replace('.', ',')->Replace('  ', ' ')->Replace('- ', '-');
 
-	protected:
-		/// <summary>
-		/// Освободить все используемые ресурсы.
-		/// </summary>
-		~form_lab_2()
-		{
-			if (components)
-			{
-				delete components;
+			String^ laststr = "";
+			for (int i = 0; i < tb_startarray->Text->Length; i++) {
+				if (tb_startarray->Text[i] == ' ' || i == tb_startarray->Text->Length - 1) {
+					array.push_back(Convert::ToInt32(laststr));
+					laststr = "";
+				}
+				else {
+					laststr += tb_startarray->Text[i];
+				}
 			}
 		}
-	private: System::Windows::Forms::Button^ btn_back;
-	protected:
-
-	private:
-		/// <summary>
-		/// Обязательная переменная конструктора.
-		/// </summary>
-		System::ComponentModel::Container ^components;
-
-#pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
-		/// </summary>
-		void InitializeComponent(void)
-		{
-			this->btn_back = (gcnew System::Windows::Forms::Button());
-			this->SuspendLayout();
-			// 
-			// btn_back
-			// 
-			this->btn_back->Location = System::Drawing::Point(68, 119);
-			this->btn_back->Name = L"btn_back";
-			this->btn_back->Size = System::Drawing::Size(142, 23);
-			this->btn_back->TabIndex = 0;
-			this->btn_back->Text = L"Вернуться на гланую";
-			this->btn_back->UseVisualStyleBackColor = true;
-			this->btn_back->Click += gcnew System::EventHandler(this, &form_lab_2::btn_back_Click);
-			// 
-			// form_lab_2
-			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 261);
-			this->Controls->Add(this->btn_back);
-			this->Name = L"form_lab_2";
-			this->Text = L"form_lab_2";
-			this->ResumeLayout(false);
-
+		else {
+			tb_startarray->Text = "0";
+			array.push_back(0);
 		}
-#pragma endregion
-	private: System::Void btn_back_Click(System::Object^ sender, System::EventArgs^ e) {
-		Owner->Show();
-		this->Close();
+
+		int maxchet = LabsDLL::Class1::Vvod(tb_minvalue);
+		int maxchetind = 0;
+		vector<int> resarray;
+		for (int i = 0; i < array.size(); i++) {
+			if (array[i] % 2 == 0 && array[i] > maxchet) {
+				maxchet = array[i];
+				maxchetind = i;
+			}
+		}
+
+		for (int i = 0; i < array.size(); i++) {
+			if (array[i] < maxchet) {
+				resarray.push_back(i);
+			}
+		}
+
+
+		String^ msg = "";
+		msg += "Индекс максимального четного элемента (" + Convert::ToString(maxchet) + "): " + Convert::ToString(maxchetind) + Environment::NewLine;
+		msg += "Индексы элементов, меньших чем " + Convert::ToString(maxchet) + ": " + Environment::NewLine;
+
+		for (int i = 0; i < resarray.size(); i++) {
+			msg += Convert::ToString(resarray[i]) + " ";
+		}
+
+		tb_answer->Text = msg;
+	}
+	private: System::Void tb_arraylen_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == 8))) e->KeyChar = Char(0);
+	}
+	private: System::Void tb_minvalue_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
+	}
+	private: System::Void tb_maxvalue_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == '-') || (e->KeyChar == 8))) e->KeyChar = Char(0);
+	}
+	private: System::Void tb_startarray_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (!((e->KeyChar >= '0') && (e->KeyChar <= '9') || (e->KeyChar == '-') || (e->KeyChar == ' ') || (e->KeyChar == 8))) e->KeyChar = Char(0);
 	}
 	};
 }
->>>>>>> 79806bfccbbf2ac06f2f01e658b0780254553fa6

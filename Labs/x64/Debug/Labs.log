@@ -1,19 +1,35 @@
 ﻿  form_lab_2.cpp
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(289,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_lab_2.cpp")
+  
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(290,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_lab_2.cpp")
+  
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(291,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_lab_2.cpp")
+  
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(327,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_lab_2.cpp")
+  
   form_main.cpp
-  form_lab_1.cpp
-C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(279,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_1.h(297,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
   (компиляция исходного файла "form_main.cpp")
   
-C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(292,35): warning C4101: e: неиспользованная локальная переменная
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_1.h(311,35): warning C4101: ex: неиспользованная локальная переменная
   (компиляция исходного файла "form_main.cpp")
   
-C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(279,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-  (компиляция исходного файла "form_lab_1.cpp")
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(289,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_main.cpp")
   
-C:\Users\Валерия\source\repos\KreOWO\laboratory-work\Labs\form_lab_1.h(292,35): warning C4101: e: неиспользованная локальная переменная
-  (компиляция исходного файла "form_lab_1.cpp")
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(290,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_main.cpp")
   
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(291,35): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_main.cpp")
+  
+C:\Users\Кирилл\source\repos\Labs\Labs\form_lab_2.h(327,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "form_main.cpp")
+  
   Создание кода...
-  form_lab_2.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  Labs.vcxproj -> C:\Users\Валерия\source\repos\KreOWO\laboratory-work\x64\Debug\Labs.exe
+  form_1prom.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Labs.vcxproj -> C:\Users\Кирилл\source\repos\Labs\x64\Debug\Labs.exe

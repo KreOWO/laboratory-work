@@ -1,1 +1,1 @@
-C:\Users\Валерия\source\repos\KreOWO\laboratory-work\LabsDLL\x64\Debug\LabsDLL.vcxproj.AssemblyReference.cache
+C:\Users\Кирилл\source\repos\Labs\LabsDLL\x64\Debug\LabsDLL.vcxproj.AssemblyReference.cache
